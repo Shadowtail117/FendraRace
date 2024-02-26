@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<packageId>shadow.fendra</packageId>
+	<name>Fendra Race</name>
+	<author>Shadow</author>
+	<description>Adds the Fendra, a race of small canines, to Rimworld.\n\nDespite their fur, they do very poorly in cold temperatures. To compensate, they can research advanced, form-fitting bodysuits that help them survive harsh weather. Ideologically, Fendra are innate scientists and researchers who focus on the collective good of their society, though they can pack a punch too if need be.</description>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<modVersion>1.0</modVersion>
+
+	<modDependencies>
+	  <li>
+		<packageId>erdelf.HumanoidAlienRaces</packageId>
+		<displayName>Humanoid Alien Races</displayName>
+		<steamWorkshopUrl>https://github.com/erdelf/AlienRaces/wiki</steamWorkshopUrl>
+	  </li>
+	</modDependencies>
+	<loadAfter>
+		<li>erdelf.HumanoidAlienRaces</li>
+	</loadAfter>	
+
+</ModMetaData>

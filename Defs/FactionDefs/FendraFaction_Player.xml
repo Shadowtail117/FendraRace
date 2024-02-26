@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<FactionDef ParentName="PlayerFactionBase">
+	<defName>FendraPlayerColony</defName>
+	<label>Fendra Colony</label>
+	<description>Your own community.</description>
+	<isPlayer>true</isPlayer>
+	<basicMemberKind>FendraColonist</basicMemberKind>
+	<pawnsPlural>colonists</pawnsPlural>
+	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerFendraFaction</factionNameMaker>
+	<settlementNameMaker>NamerFendraSettlement</settlementNameMaker>
+	<techLevel>Industrial</techLevel>
+	<backstoryCategories>
+		<li>FendraBackstory</li>
+	</backstoryCategories>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+	<startingResearchTags>
+		<li>ClassicStart</li>
+	</startingResearchTags>
+	<allowedCultures>
+		<li>Astropolitan</li>
+		<li>Rustican</li>
+	</allowedCultures>
+</FactionDef>
+</Defs>
