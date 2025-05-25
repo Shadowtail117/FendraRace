@@ -24,4 +24,31 @@
 		<li>Rustican</li>
 	</allowedCultures>
 </FactionDef>
+
+<!-- Tribal tech start, not in any default scenario -->
+<FactionDef ParentName="PlayerFactionBase">
+	<defName>FendraPlayerColonyNoResearch</defName>
+	<label>Fendra Colony (No Research)</label>
+	<description>Your own technologically-disadvantaged community. Begin with tribal-level research and medieval tech level.</description>
+	<isPlayer>true</isPlayer>
+	<basicMemberKind>FendraColonist</basicMemberKind>
+	<pawnsPlural>colonists</pawnsPlural>
+	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerFendraFaction</factionNameMaker>
+	<settlementNameMaker>NamerFendraSettlement</settlementNameMaker>
+	<techLevel>Industrial</techLevel>
+	<backstoryCategories>
+		<li>FendraBackstory</li>
+	</backstoryCategories>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+	<startingResearchTags>
+		<li>TribalStart</li>
+	</startingResearchTags>
+	<allowedCultures>
+		<li>Astropolitan</li>
+		<li>Rustican</li>
+		<li>Corunan</li>
+	</allowedCultures>
+</FactionDef>
 </Defs>
