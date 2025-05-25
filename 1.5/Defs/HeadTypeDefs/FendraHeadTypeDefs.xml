@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Male_Fendra_Normal</defName>
+		<graphicPath>Things/Fendra/Head/Male/Male_Fendra_Normal</graphicPath>      
+		<gender>Male</gender> 
+  	</HeadTypeDef> 
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Female_Fendra_Normal</defName>
+		<graphicPath>Things/Fendra/Head/Fendra/Female/Female_Fendra_Normal</graphicPath>      
+		<gender>Female</gender> 
+  	</HeadTypeDef> 
+</Defs>

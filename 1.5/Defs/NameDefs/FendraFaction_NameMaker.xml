@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<RulePackDef>
+		<defName>NamerFendraFaction</defName>
+		<include>
+			<li>FendraNameUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name(p=2)->The [nation] of [ofThing]</li>
+				<li>r_name->The [adjective] [nation]</li>
+				<li>r_name->The [nation] of [Direction] [WordFendra]</li>
+				<li>r_name->The [adjective] [nation] of [ofThing]</li>
+				<li>r_name->The [adjective] [nation] of [Direction] [WordFendra]</li>
+				<li>r_name(p=3)->[WordFendra]</li>
+				<li>r_name->[Direction] [WordFendra]</li>
+
+				<li>nation->Coalition</li>
+				<li>nation->Alliance</li>
+				<li>nation->Fellowship</li>
+				<li>nation->Nation</li>
+				<li>nation->Unity</li>
+				<li>nation->Federation</li>
+
+				<li>adjective->True</li>
+				<li>adjective->Absolute</li>
+				<li>adjective->Sacred</li>
+				<li>adjective(p=0.5)->Furry</li>
+				<li>adjective(p=0.5)->Fluffy</li>
+
+				<li>ofThing(p=4)->[WordFendra]</li>
+				<li>ofThing->the Sun</li>
+				<li>ofThing->the Moon</li>
+				<li>ofThing(p=0.5)->Fur</li>
+				<li>ofThing->Klezzi</li>
+				<li>ofThing->Vallis</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>NamerFendraSettlement</defName>
+		<include>
+			<li>FendraNameUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name(p=4)->[SettlementWord]</li>
+				<li>r_name(p=2)->[SettlementCombo]</li>
+				<li>r_name->[SettlementNear]</li>
+				<li>r_name(p=3)->[SettlementFixed]</li>
+
+				<li>SettlementWord(p=3)->[WordFendra]</li>
+				<li>SettlementWord->[TerrainFeature][TownEnd]</li>
+
+				<!-- A smaller list based on the outlaner town end list -->
+				<li>TownEnd->ville</li>
+				<li>TownEnd->dale</li>
+				<li>TownEnd->ton</li>
+				<li>TownEnd->wood</li>
+				<li>TownEnd->land</li>
+				<li>TownEnd->hope</li>
+				<li>TownEnd->ton</li>
+
+
+				<li>SettlementCombo(p=2)->[Direction] [SettlementWord]</li>
+				<li>SettlementCombo->[Vegetable] [TerrainFeature]</li>
+				<li>SettlementCombo->[WordFendra] [concept_positive]</li>
+				<li>SettlementCombo->[WordFendra] [Community]</li>
+
+				
+				<li>SettlementNear->[NearSettlementFirst]-by-the-[TerrainFeature]</li>
+				<li>SettlementNear->[NearSettlementFirst]-on-the-[TerrainFeature]</li>
+				<li>SettlementNear->[NearSettlementFirst]-at-the-[TerrainFeature]</li>
+
+				<li>NearSettlementFirst->[SettlementWord]</li>
+				<li>NearSettlementFirst->[WordFendra]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>SettlementFixed->FendraNames/FendraTown</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+
+
+	<RulePackDef>
+		<defName>FendraNameUtility</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>WordFendra(p=4)->[SylF][SylF]</li>
+				<li>WordFendra(p=2)->[SylF][SylF][SylF]</li>
+				<li>WordFendra(p=0.2)->[SylF][SylF][SylF][SylF]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>SylF->WordParts/SyllablesFendra</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+</Defs>

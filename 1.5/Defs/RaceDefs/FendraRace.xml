@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<AlienRace.ThingDef_AlienRace ParentName="Human">
+    <defName>Fendra</defName>
+    <label>fendra</label>
+    <description>Fendra are a race of short, biped canines. Despite the ample fur on their bodies, they perform very poorly in cold conditions and require a fair amount of temperature regulation to stay comfortable and healthy.</description>
+
+    <alienRace>
+    <generalSettings>
+
+        <maleGenderProbability>0.5</maleGenderProbability>
+        <maxDamageForSocialfight>6</maxDamageForSocialfight>
+        <allowHumanBios>false</allowHumanBios>
+        <immuneToXenophobia>false</immuneToXenophobia>
+        <minAgeForAdulthood>20</minAgeForAdulthood>
+        <humanRecipeImport>true</humanRecipeImport>
+
+        <!-- Fendra are small and not very strong, so many of them don't mind augmenting themselves. Extremely few would hate to. -->
+        <disallowedTraits>
+            <li>
+                <defName>BodyPurist</defName>
+                <chance>5</chance>
+            </li>
+        </disallowedTraits>
+
+        <!-- Fendra appreciate having other fendra on the planet with them. -->
+        <factionRelations>
+            <li>   
+                <factions>
+                    <li>FendraFaction</li>
+                </factions>
+                <goodwill>
+                    <min>0</min>
+                    <max>20</max>
+                </goodwill>
+            </li>
+        </factionRelations>
+
+        <alienPartGenerator>
+            <colorChannels>
+                <li>
+                    <name>skin</name>
+                    <!-- "Main" body fur, this includes the sides and back, most of the head, and tail. -->
+                    <first Class="ColorGenerator_Options">
+                        <options>
+                            <!-- White-->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(230, 230, 230, 255)</only>
+                            </li>
+                            <!-- Grey-->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(100, 100, 100, 255)</only>
+                            </li>
+                            <!-- Orange-->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(200, 90, 0, 255)</only>
+                            </li>
+                            <!-- Dull brown -->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(90, 70, 65, 255)</only>
+                            </li>
+                        </options>
+                    </first>
+                    <!-- Secondary body fur, this includes the cheeks, belly, and inner ear. -->
+                    <second Class="ColorGenerator_Options">
+                        <options>
+                            <!-- Snow white -->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(255, 255, 255, 255)</only>
+                            </li>
+                            <!-- Slightly darker white, slightly more common -->
+                            <li>
+                                <weight>15</weight>
+                                <only>RGBA(225, 225, 225, 255)</only>
+                            </li>
+                        </options>
+                    </second>
+                </li>
+            </colorChannels>
+            
+            <bodyAddons>
+                <li>
+                    <path>Things/Fendra/Tail/FendraTail</path>
+
+                    <conditions>
+                        <BodyPart>
+                            <bodyPart>FendraTail</bodyPart>
+                            <drawWithoutPart>false</drawWithoutPart>
+                        </BodyPart>
+                    </conditions>
+                    
+                    <colorChannel>skin</colorChannel>
+                    <inFrontOfBody>false</inFrontOfBody>
+                    <defaultOffset>Tail</defaultOffset>
+                    <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+                    <offsets>
+                        <north>
+                            <bodyTypes>
+                                <Baby>(0,0)</Baby>
+                                <Child>(0,0.3311897)</Child>
+                                <Thin>(0,0.112)</Thin>
+                            </bodyTypes>
+                        </north>
+                        <east>
+                            <bodyTypes>
+                                <Baby>(-0.06752411,0.1189711)</Baby>
+                                <Child>(-0.04823151,0.1382637)</Child>
+                                <Thin>(0,0)</Thin>
+                            </bodyTypes>
+                        </east>
+                        <south>
+                            <bodyTypes>
+                                <Baby>(-0.4212219,0.2475884)</Baby>
+                                <Child>(-0.4855306, 0.3311897)</Child>
+                                <Thin>(-0.5,0.17)</Thin>
+                            </bodyTypes>
+                        </south>
+                        <west>
+                            <bodyTypes>
+                                <Baby>(-0.09967846,0.1061093)</Baby>
+                                <Child>(-0.04180064,0.1446945)</Child>
+                                <Thin>(0,0)</Thin>
+                            </bodyTypes>
+                        </west>
+                    </offsets>
+                </li>
+            </bodyAddons>
+
+            <bodyTypes Inherit="False">
+                <li>Thin</li>
+                <li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
+                <li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
+            </bodyTypes>
+
+            <headTypes Inherit="False">
+                <li>Male_Fendra_Normal</li>
+                <li>Female_Fendra_Normal</li>
+            </headTypes>
+        </alienPartGenerator>
+    </generalSettings>
+
+    <graphicPaths>
+        <body>Things/Fendra/Body/</body>
+        <head>Things/Fendra/Head/</head>
+    </graphicPaths>
+
+    <styleSettings>
+        <!-- Fendra do not have hairstyles, at least for now. -->
+        <li>
+            <key>HairDef</key>
+            <value>
+                <hasStyle>false</hasStyle>
+            </value>
+        </li>
+        <li>
+            <!-- Fendra do not have beards. -->
+            <key>BeardDef</key>
+            <value>
+                <hasStyle>false</hasStyle>
+            </value>
+        </li>
+    </styleSettings>
+    
+    <thoughtSettings>
+        <replacerList>
+            <!-- Fendra HATE being wet. Double the duration and mood penalty. -->
+            <li>
+                <original>SoakingWet</original>
+                <replacer>FendraSoakingWet</replacer>
+            </li>
+
+            <!-- Fendra are slightly more relaxed with being nude since their fur helps cover their private parts. It still makes them sad but only half as much.-->
+            <li>
+                <original>Naked</original>
+                <replacer>FendraNaked</replacer>
+            </li>
+        </replacerList>
+    </thoughtSettings>
+
+    <raceRestriction>
+        <apparelList>
+            <li>FendraBodysuit</li>
+        </apparelList>
+
+        <researchList>
+            <li>
+                <projects>
+                    <li>FendraBodysuitResearch</li>
+                </projects>
+            </li>
+        </researchList>
+
+        <blackEndoCategories>
+            <li>BodyType</li>
+            <li>Head</li>
+            <li>HairColor</li>
+            <li>Jaw</li>
+            <li>Melanin</li>
+        </blackEndoCategories>
+
+        <blackGeneTags>
+            <li>BodyType</li>
+            <li>Head</li>
+            <li>HairColor</li>
+            <li>Jaw</li>
+            <li>Fur</li>
+        </blackGeneTags>
+
+        <blackXenotypeList>
+            <li>Dirtmole</li>
+            <li>Genie</li>
+            <li>Hussar</li>
+            <li>Sanguophage</li>
+            <li>Neanderthal</li>
+            <li>Pigskin</li>
+            <li>Impid</li>
+            <li>Waster</li>
+            <li>Yttakin</li>
+            <li>Highmate</li>
+          </blackXenotypeList>
+    </raceRestriction>
+
+    </alienRace>
+
+    <statBases>
+        <ComfyTemperatureMin>10</ComfyTemperatureMin>
+        <ComfyTemperatureMax>30</ComfyTemperatureMax>
+
+        <!-- They can carry a little less than a human as they are smaller... -->
+        <CarryingCapacity>65</CarryingCapacity>
+
+        <!-- ...however, they can move a little bit quicker. -->
+        <MoveSpeed>5</MoveSpeed>
+    </statBases>
+
+    <race>
+        <baseBodySize>0.9</baseBodySize>
+        
+        <body>Fendra</body>
+        <nameGenerator>NamerFendra</nameGenerator>
+        <nameGeneratorFemale>NamerFendra</nameGeneratorFemale>
+
+        <hediffGiverSets>
+            <li>OrganicStandard</li>
+            <li>Human</li>
+            <li>FendraHediffGiverSet</li>
+        </hediffGiverSets>
+    </race>
+</AlienRace.ThingDef_AlienRace>
+</Defs>

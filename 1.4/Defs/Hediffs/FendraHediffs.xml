@@ -38,7 +38,7 @@
     <isBad>false</isBad>
     <stages>
         <li>
-            <totalBleedFactor>0.8</totalBleedFactor>
+            <totalBleedFactor>0.75</totalBleedFactor>
             <becomeVisible>false</becomeVisible>
         </li>
     </stages>

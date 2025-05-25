@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Fendra HATE being wet. Duration and mood penalty are doubled. -->
+
+    <ThoughtDef>
+        <defName>FendraSoakingWet</defName>
+        <durationDays>0.2</durationDays>
+        <stackLimit>1</stackLimit>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <nullifyingPrecepts>
+            <li MayRequire="Ludeon.RimWorld.Ideology">RoughLiving_Welcomed</li>
+        </nullifyingPrecepts>
+        <stages>
+            <li>
+                <label>sopping wet</label>
+                <description>My fur is completely soaking wet. It'll take forever to dry off.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- Reduced mood penalty for being naked in non-Ideology. -->
+    <ThoughtDef>
+        <defName>FendraNaked</defName>
+        <workerClass>ThoughtWorker_PsychologicallyNude</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <nullifyingTraits>
+            <li>Nudist</li>
+        </nullifyingTraits>
+        <stages>
+            <li>
+                <label>naked</label>
+                <description>I'm naked. My fur helps cover it up, but this is still humiliating.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

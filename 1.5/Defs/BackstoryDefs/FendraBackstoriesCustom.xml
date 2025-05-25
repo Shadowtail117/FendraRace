@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<!-- These are custom-made backstories for pawn bios. Not shuffleable. -->
+
+
+	<!-- Harin Endel -->
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Custom_Resident</defName>
+		<title>medical resident</title>
+		<titleShort>resident</titleShort>
+		<baseDesc>After gaining [PAWN_possessive] medical degree, [PAWN_nameDef] became a medical resident on a multispecies research installation. [PAWN_pronoun] was timid but had a pure, kind heart. [PAWN_pronoun] gradually gained confidence in [PAWN_objective]self and [PAWN_possessive] abilities, even though [PAWN_pronoun] wasn't able to finish the residency.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<Social>4</Social>
+			<Medicine>7</Medicine>
+		</skillGains>
+		<forcedTraits>
+			<Kind>0</Kind>
+		</forcedTraits>
+		<disallowedTraits>
+			<Psychopath>0</Psychopath>
+			<Masochist>0</Masochist>
+			<Pyromaniac>0</Pyromaniac>
+			<Bloodlust>0</Bloodlust>
+			<Cannibal>0</Cannibal>
+		</disallowedTraits>
+		<shuffleable>false</shuffleable>
+		<bioAgeRange>26~30</bioAgeRange>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Custom_Student</defName>
+		<title>medical student</title>
+		<titleShort>student</titleShort>
+		<baseDesc>[PAWN_nameDef] was happiest working and playing alone as a kit. In [PAWN_possessive] late teens, [PAWN_pronoun] suffered a severe work injury — [PAWN_pronoun]'s never said exactly what — that left cosmetic scars along [PAWN_possessive] back. [PAWN_pronoun] was inspired by the advanced care the doctors gave [PAWN_objective] and enrolled in medical school shortly after.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<Social>-1</Social>
+			<Medicine>2</Medicine>
+			<Intellectual>2</Intellectual>
+		</skillGains>
+		<shuffleable>false</shuffleable>
+	</AlienRace.AlienBackstoryDef>
+</Defs>

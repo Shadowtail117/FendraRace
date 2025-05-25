@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ScenarioDef>
+	<defName>FendraCrash</defName>
+	<label>Crashlanded Fendra</label>
+	<description>Out of a small Fendran corvette, only three managed to make it to the escape pods in time before its reactor detonated, turning it into orbital debris. Now it's up to you to rebuild your society from scratch. Will you take back to the stars and return home, or turn this desolate rimworld into a new one?</description>
+
+	<scenario>
+		<summary>Three crashlanded Fendra.</summary>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>FendraPlayerColony</factionDef>
+		</playerFaction>
+		<parts>
+
+			<!-- Config pages -->
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>3</pawnCount>
+				<pawnChoiceCount>5</pawnChoiceCount>
+			</li>
+
+			<!-- Player starting stuff spawn method-->
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+				<method>DropPods</method>
+				<visible>false</visible>
+			</li>
+
+			<!-- Player starting things -->
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Silver</thingDef>
+				<count>800</count>
+			</li>
+
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MealSurvivalPack</thingDef>
+				<count>30</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MedicineIndustrial</thingDef>
+				<count>30</count>
+			</li>
+
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>ComponentIndustrial</thingDef>
+				<count>30</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Gun_Revolver</thingDef>
+				<count>1</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Gun_BoltActionRifle</thingDef>
+				<count>1</count>
+			</li>
+			
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MeleeWeapon_Knife</thingDef>
+				<stuff>Steel</stuff>
+			</li>
+
+			<!-- CE compatibility -->
+			<li MayRequire="ceteam.combatextended" Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Ammo_303British_FMJ</thingDef>
+				<count>100</count>
+			</li>
+
+			<li MayRequire="ceteam.combatextended" Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Ammo_44Magnum_FMJ</thingDef>
+				<count>60</count>
+			</li>
+
+			<!-- Scatter some things near player start -->
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>Steel</thingDef>
+				<count>400</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>WoodLog</thingDef>
+				<count>350</count>
+			</li>      
+
+			<!-- Scatter some things anywhere -->
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>ShipChunk</thingDef>
+				<allowRoofed>false</allowRoofed>
+				<count>2</count>
+			  </li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>Steel</thingDef>
+				<count>500</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>MealSurvivalPack</thingDef>
+				<count>10</count>
+			</li>
+
+			<!-- Game start dialog -->
+			<li Class="ScenPart_GameStartDialog">
+				<def>GameStartDialog</def>
+				<text>It was supposed to be a routine research mission to the rimworld -- but whether through negligence or malice, your corvette's reactor went supercritical. You only had a few seconds, and only the three of you made it to the escape pods in time.\n\nNow it's up to you to rebuild your society from scratch. Will you take back to the stars and return home, or turn this desolate rimworld into a new one?</text>
+				<closeSound>GameStartSting</closeSound>
+			</li>
+		</parts>
+	</scenario>
+</ScenarioDef>
+</Defs>

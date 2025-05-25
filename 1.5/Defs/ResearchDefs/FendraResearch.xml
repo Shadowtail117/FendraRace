@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ResearchProjectDef>
+	<defName>FendraBodysuitResearch</defName>
+	<label>Fendra Bodysuit</label>
+	<description>We can develop specialized bodysuits to keep Fendra warm even in harsh weather. Requires a Fendra researcher.</description>
+	<baseCost>1000</baseCost>
+	<techLevel>Industrial</techLevel>
+	<tab>FendraResearchTab</tab>
+	<researchViewX>0</researchViewX>
+	<researchViewY>1</researchViewY>
+	<prerequisites>
+		<li>Electricity</li>
+		<li>ComplexClothing</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+	<defName>FendraBionicTailResearch</defName>
+	<label>Bionic Fendra Tails</label>
+	<description>We can develop advanced bionic tails that look pretty and improve balance. Requires a Fendra researcher.</description>
+	<baseCost>1500</baseCost>
+	<techLevel>Spacer</techLevel>
+	<tab>FendraResearchTab</tab>
+	<researchViewX>0</researchViewX>
+	<researchViewY>1</researchViewY>
+	<prerequisites>
+		<li>Bionics</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+</ResearchProjectDef>
+</Defs>

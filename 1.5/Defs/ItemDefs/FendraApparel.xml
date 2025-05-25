@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<ThingDef ParentName="ApparelBase">
+	<defName>FendraBodysuit</defName>
+	<label>fendra bodysuit</label>
+	<description>A small, skintight suit that has built-in heating coils around the torso to keep its user warm. The efficient microbattery inside does not need recharging.</description>
+	<techLevel>Industrial</techLevel>
+	<smeltable>false</smeltable>
+
+	<graphicData>
+		<texPath>Apparel/FendraBodysuit/FendraBodysuit</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+
+	<statBases>
+		<WorkToMake>10000</WorkToMake>
+		<MaxHitPoints>150</MaxHitPoints>
+		<MarketValue>300</MarketValue>
+		<Mass>2</Mass>
+		<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+		<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+		<ArmorRating_Heat>0.4</ArmorRating_Heat>
+		<Insulation_Cold>30</Insulation_Cold>
+		<Insulation_Heat>5</Insulation_Heat>
+
+		<StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+		<StuffEffectMultiplierInsulation_Cold>2.00</StuffEffectMultiplierInsulation_Cold>
+		<StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+		<EquipDelay>1</EquipDelay>
+	</statBases>
+
+	<apparel>
+		<wornGraphicPath>Apparel/FendraBodysuit/FendraBodysuit</wornGraphicPath>
+		<bodyPartGroups>
+			<li>Torso</li>
+			<li>Neck</li>
+			<li>Shoulders</li>
+			<li>Arms</li>
+			<li>Legs</li>
+		</bodyPartGroups>
+		<layers>
+			<li>OnSkin</li>
+		</layers>
+		<tags>
+			<li>IndustrialAdvanced</li>
+			<li>FendraClothing</li>
+		</tags>
+		<defaultOutfitTags>
+			<li>Worker</li>
+			<li>Soldier</li>
+		</defaultOutfitTags>
+	</apparel>
+	<colorGenerator Class="ColorGenerator_StandardApparel" />
+	<tradeTags>
+		<li>Clothing</li>
+	</tradeTags>
+</ThingDef>
+</Defs>

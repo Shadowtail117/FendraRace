@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>  
+	<RecipeDef Abstract="True" Name="FendraTailSurgery">
+		<effectWorking>Surgery</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<workSkillLearnFactor>15</workSkillLearnFactor>
+		<appliedOnFixedBodyParts>
+			<li>FendraTail</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+	<RecipeDef ParentName="FendraTailSurgery">
+		<defName>InstallFendraTail</defName>
+		<label>install fendra tail</label>
+		<description>Replace a missing or damaged fendra tail.</description>
+		<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+		<jobString>Installing a fendra tail.</jobString>
+		<workAmount>1200</workAmount>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FendraTail</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>FendraTail</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef ParentName="FendraTailSurgery">
+		<defName>InstallClothFendraTail</defName>
+		<label>install cloth fendra tail</label>
+		<description>Installs a cloth fendra tail.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing a cloth fendra tail.</jobString>
+		<workAmount>1000</workAmount>
+        <!-- Much less likely to go wrong.-->
+		<surgerySuccessChanceFactor>2.0</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>3</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cloth</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>Cloth</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<addsHediff>FendraClothTail</addsHediff>
+        <recipeUsers>
+			<li>Fendra</li>
+		</recipeUsers>
+	</RecipeDef>
+
+	<RecipeDef ParentName="FendraTailSurgery">
+		<defName>InstallBionicFendraTail</defName>
+		<label>install bionic fendra tail</label>
+		<description>Installs a bionic fendra tail.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing bionic fendra tail.</jobString>
+		<workAmount>1500</workAmount>
+        <skillRequirements>
+            <Medicine>6</Medicine>
+        </skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FendraBionicTail</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>FendraBionicTail</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<addsHediff>FendraBionicTail</addsHediff>
+        <recipeUsers>
+			<li>Fendra</li>
+		</recipeUsers>
+	</RecipeDef>
+</Defs> 

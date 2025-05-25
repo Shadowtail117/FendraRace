@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<RulePackDef>
+		<defName>NamerFendraUtility</defName>
+		<rulePack>
+			<rulesFiles>
+				<li>MaleFirst->FendraNames/MaleFirst</li>
+				<li>FemaleFirst->FendraNames/FemaleFirst</li>
+
+				<li>LastPre->FendraNames/LastPre</li>
+				<li>LastPost->FendraNames/LastPost</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>NamerFendra</defName>
+		<include>
+			<li>NamerFendraUtility</li>
+		</include>
+		
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[MaleFirst] [LastPre][LastPost]</li>
+				<li>r_name->[FemaleFirst] [LastPre][LastPost]</li>
+			</rulesStrings>
+
+			<rulesRaw>
+				<li Class="Rule_NamePerson">
+					<gender>Male</gender>
+					<keyword>MaleFirst</keyword>
+				</li>
+				<li Class="Rule_NamePerson">
+					<gender>Female</gender>
+					<keyword>FemaleFirst</keyword>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+</Defs>

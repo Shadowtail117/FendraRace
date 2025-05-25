@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<!-- Hey, I can have one custom insert, right? As a treat? -->
+	<AlienRace.PawnBioDef>
+		<defName>Fendra_HarinEndel</defName>
+		<childhood>Fendra_Custom_Student</childhood>
+		<adulthood>Fendra_Custom_Resident</adulthood>
+		<gender>Male</gender>
+		<name>
+			<first>Harin</first>
+			<nick>Harin</nick>
+			<last>Endel</last>
+		</name>
+		<validRaces>
+			<li>Fendra</li>
+		</validRaces>
+		<factionLeader>false</factionLeader>
+	</AlienRace.PawnBioDef>
+</Defs>

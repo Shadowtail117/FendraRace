@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Adulthood backstories -->
+
+	<!--
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_TestAdult</defName>
+		<title>fendra test subject</title>
+		<titleShort>test subject</titleShort>
+		<baseDesc>[PAWN_nameDef] was a test subject for Shadow's sadistic needs in their adult life.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<Medicine>5</Medicine>
+			<Melee>5</Melee>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+	-->
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Scientist</defName>
+		<title>physicist</title>
+		<titleShort>physicist</titleShort>
+		<baseDesc>[PAWN_nameDef] was a respected scientist on the Fendran homeworld. Although [PAWN_pronoun] excelled in their studies, [PAWN_pronoun] wasn't able to focus on much else in [PAWN_possessive] life.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryScience</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Construction>-2</Construction>
+			<Artistic>-2</Artistic>
+			<Crafting>2</Crafting>
+			<Intellectual>8</Intellectual>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_ResearchDirector</defName>
+		<title>research director</title>
+		<titleShort>director</titleShort>
+		<baseDesc>[PAWN_nameDef] was a renowned research director on the Fendran homeworld. [PAWN_pronoun] was the paragon of [PAWN_possessive] field, working long days and nights and leading [PAWN_possessive] team in the pursuit of science.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryScience</li>
+			<li>FendraBackstoryPolitical</li>
+		</spawnCategories>
+		<workDisables>
+			<li>ManualDumb</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+			<li>Social</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Social>2</Social>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Influencer</defName>
+		<title>influencer</title>
+		<titleShort>influencer</titleShort>
+		<baseDesc>[PAWN_nameDef] was a medium-scale influencer who captivated young Fendran minds with clickbait titles and copy-paste reactions. [PAWN_pronoun] knows how to manipulate others and is used to being better than everyone around [PAWN_objective].</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Social</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Social>8</Social>
+			<Intellectual>2</Intellectual>
+			<Artistic>2</Artistic>
+		</skillGains>
+		<forcedTraits>
+			<Jealous>0</Jealous>
+		</forcedTraits>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_TestSubject</defName>
+		<title>test subject</title>
+		<titleShort>subject</titleShort>
+		<baseDesc>Someone had to be the one to test new drugs. [PAWN_nameDef] was paid for [PAWN_possessive] time — and body — to be given doses of new formulas and then report the effects. [PAWN_pronoun] learned a lot about the drugs that [PAWN_pronoun] took, and got good at making comfort food to help [PAWN_objective] feel better afterward.\n\nRemarkably, [PAWN_pronoun] hasn't suffered any serious side effects, though the ordeal has left a permanent taste for drugs in [PAWN_possessive] mouth.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<Medicine>4</Medicine>
+			<Intellectual>3</Intellectual>
+			<Cooking>4</Cooking>
+		</skillGains>
+		<forcedTraits>
+			<!-- Chemical interest -->
+			<DrugDesire>1</DrugDesire>
+		</forcedTraits>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Politician</defName>
+		<title>politician</title>
+		<titleShort>politician</titleShort>
+		<baseDesc>[PAWN_nameDef] was a politicial within [PAWN_possessive] local government. [PAWN_pronoun] was respected for much of [PAWN_possessive] career, but a vicious scandal forced [PAWN_objective] to abdicate and move away.\n\n[PAWN_nameDef]'s secretary did almost all of the banal work for [PAWN_objective] while in office.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryPolitical</li>
+		</spawnCategories>
+		<workDisables>
+			<li>ManualDumb</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Social</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Social>10</Social>
+			<Intellectual>2</Intellectual>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Enforcer</defName>
+		<title>enforcer</title>
+		<titleShort>enforcer</titleShort>
+		<baseDesc>[PAWN_nameDef] was an enforcer, put in charge of keeping the peace on the Fendran homeworld. [PAWN_pronoun] was given plenty of autonomy within [PAWN_possessive] beat and built up a friendly reputation.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryMilitary</li>
+		</spawnCategories>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Melee>3</Melee>
+			<Social>4</Social>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Social</li>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Enforcer_Elite</defName>
+		<title>elite enforcer</title>
+		<titleShort>enforcer</titleShort>
+		<baseDesc>[PAWN_nameDef] was an enforcer, put in charge of keeping the peace on the Fendran homeworld. [PAWN_pronoun] worked in a very rough part of [PAWN_possessive] city, and spent much of [PAWN_possessive] time fighting criminals.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryMilitary</li>
+		</spawnCategories>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Melee>5</Melee>
+			<Social>-1</Social>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Social</li>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Nurse</defName>
+		<title>nurse</title>
+		<titleShort>nurse</titleShort>
+		<baseDesc>[PAWN_nameDef] worked in a busy hospital on the Fendran homeworld, doing routine work such as changing bandages and taking temperatures.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryMedical</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Caring</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Social>4</Social>
+			<Medicine>5</Medicine>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Doctor</defName>
+		<title>whitepaw</title>
+		<titleShort>whitepaw</titleShort>
+		<baseDesc>[PAWN_nameDef] was a whitepaw — a monicker for a Fendran doctor — in a busy hospital on the Fendran homeworld. Shifts were long and grueling, but [PAWN_pronoun] didn't mind.\n\nAfter years of work, [PAWN_nameDef] has seen enough of the consequences of violence for a lifetime.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryMedical</li>
+		</spawnCategories>
+		<workDisables>
+			<li>Violent</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Caring</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Social>4</Social>
+			<Medicine>8</Medicine>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Skymedic</defName>
+		<title>skymedic</title>
+		<titleShort>skymedic</titleShort>
+		<baseDesc>[PAWN_nameDef] was a skymedic, responding rapidly to medical emergencies via rapid insertion in a hovercraft. [PAWN_pronoun] is used to working with limited supplies and especially time.\n\nOccasionally, [PAWN_nameDef] had to restrain disoriented and unruly patients while stabilizing them.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryMedical</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Caring</li>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Melee>2</Melee>
+			<Medicine>6</Medicine>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Engineer</defName>
+		<title>construction engineer</title>
+		<titleShort>engineer</titleShort>
+		<baseDesc>[PAWN_nameDef] was a construction engineer on the Fendran homeworld, coordinating with [PAWN_possessive] team using state-of-the-art equipment to build everything from massive hydroponics laboratories to modular housing. [PAWN_pronoun] learned to value the effectiveness of a tight-knit team.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>ManualSkilled</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Construction>6</Construction>
+			<Social>2</Social>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Hydroponicist</defName>
+		<title>hydroponics specialist</title>
+		<titleShort>hydroponicist</titleShort>
+		<baseDesc>[PAWN_nameDef] worked in a massive hydroponics lab, growing specialized strains of crops to feed entire cities. [PAWN_pronoun] was never seen not wearing [PAWN_possessive] labcoat.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>ManualSkilled</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Social>-2</Social>
+			<Plants>7</Plants>
+			<Intellectual>3</Intellectual>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Miner</defName>
+		<title>microasteroid miner</title>
+		<titleShort>miner</titleShort>
+		<baseDesc>[PAWN_nameDef] piloted a cramped driller that cracked small asteroids open from the inside out to harvest the ores within. The dangerous nature of [PAWN_possessive] work gave [PAWN_objective] plenty of experience making on-the-fly repairs.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>ManualDumb</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Crafting>3</Crafting>
+			<Mining>6</Mining>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_GameDesigner</defName>
+		<title>game designer</title>
+		<titleShort>programmer</titleShort>
+		<baseDesc>[PAWN_nameDef] worked on a small team making video games. [PAWN_pronoun] had a close bond with [PAWN_possessive] team, as well as the food delivery app on [PAWN_possessive] phone.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<workDisables>
+			<li>Cooking</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+			<li>Social</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Social>3</Social>
+			<Artistic>4</Artistic>
+			<Intellectual>6</Intellectual>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Ranger</defName>
+		<title>ranger</title>
+		<titleShort>ranger</titleShort>
+		<baseDesc>[PAWN_nameDef] helped maintain a large nature reserve. [PAWN_pronoun] became adept at herding the animals, and occasionally culling one or two and selling the meat under the table.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryCriminal</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Animals</li>
+			<li>PlantWork</li>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Shooting>3</Shooting>
+			<Animals>6</Animals>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Drifter</defName>
+		<title>drifter</title>
+		<titleShort>drifter</titleShort>
+		<baseDesc>[PAWN_nameDef] wasn't able to hold down any job for very long. [PAWN_pronoun] floated between professions, picking up a myriad of skills but not committing to any of them.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryCriminal</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>ManualDumb</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Cooking>2</Cooking>
+			<Plants>2</Plants>
+			<Construction>2</Construction>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Arcclaw</defName>
+		<title>arcclaw</title>
+		<titleShort>arcclaw</titleShort>
+		<baseDesc>Arcclaws — so-called after an ancient story described one with electricity arcing between his claws — are a respected profession of inventors that help advance Fendran research with novel contributions. [PAWN_nameDef] was one such person, and made several minor advancements in [PAWN_possessive] field.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryScience</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+			<li>ManualSkilled</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Crafting>6</Crafting>
+			<Intellectual>3</Intellectual>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Roboticist</defName>
+		<title>roboticist</title>
+		<titleShort>roboticist</titleShort>
+		<baseDesc>[PAWN_nameDef] worked in a robotics lab, developing (but not installing) cutting-edge prosthetics and bionic limbs for other Fendra. Occasionally, [PAWN_pronoun] would be asked to develop mechanized combat suits, giving [PAWN_objective] limited insight into military equipment.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryScience</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Crafting</li>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Shooting>2</Shooting>
+			<Crafting>5</Crafting>
+			<Intellectual>3</Intellectual>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_MafiaLieutenant</defName>
+		<title>career criminal</title>
+		<titleShort>criminal</titleShort>
+		<baseDesc>Even in Fendran society, organized crime has a strong foothold. [PAWN_nameDef] was a lieutenant in a notable mafia, following the boss' orders to the letter. [PAWN_pronoun] especially liked having subordinates to boss around, but knew not to get attached to anyone, ever.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryCriminal</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Melee>2</Melee>
+			<Shooting>3</Shooting>
+			<Social>3</Social>
+		</skillGains>
+		<forcedTraits>
+			<Psychopath>0</Psychopath>
+		</forcedTraits>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Convict</defName>
+		<title>convict</title>
+		<titleShort>convict</titleShort>
+		<baseDesc>[PAWN_nameDef] denies involvement in the crime that saw [PAWN_objective] spend many years in prison. The Fendran reform programs didn't quite cut it for [PAWN_objective], and one fateful day, [PAWN_pronoun] hijacked a delivery shuttle and flew off into the cosmos.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryCriminal</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Shooting>3</Shooting>
+			<Melee>4</Melee>
+			<Cooking>1</Cooking>
+			<Social>2</Social>
+		</skillGains>
+		<forcedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>50</chance>
+			</li>
+		</forcedTraitsChance>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Pirate</defName>
+		<title>pirate outlaw</title>
+		<titleShort>pirate outlaw</titleShort>
+		<baseDesc>Fendran society is no exception to the plague of piracy. [PAWN_nameDef] managed to avoid numerous close calls with the law while extorting and ravaging passing spaceships.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryCriminal</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Melee>4</Melee>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Soldier</defName>
+		<title>soldier</title>
+		<titleShort>soldier</titleShort>
+		<baseDesc>[PAWN_nameDef] didn't know what to do with [PAWN_possessive] life, and decided to enlist in the Fendran military. [PAWN_pronoun] learned a variety of basic skills, but didn't see any combat.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryMilitary</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Shooting>1</Shooting>
+			<Medicine>2</Medicine>
+			<Construction>2</Construction>
+			<Cooking>1</Cooking>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Lieutenant</defName>
+		<title>lieutenant</title>
+		<titleShort>lieutenant</titleShort>
+		<baseDesc>[PAWN_nameDef] was a lieutenant in the Fendran military, and often fought alongside [PAWN_possessive] platoon at the front lines. [PAWN_pronoun] had a sharp mind for battle and became known for winning many skirmishes.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryMilitary</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Social</li>
+		</requiredWorkTags>
+		<workDisables>
+			<li>Artistic</li>
+		</workDisables>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Melee>4</Melee>
+			<Intellectual>2</Intellectual>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Deserter</defName>
+		<title>deserter</title>
+		<titleShort>deserter</titleShort>
+		<baseDesc>[PAWN_nameDef] was a combat medic in the Fendran military. After a skirmish went awry and [PAWN_pronoun] saw [PAWN_possessive] best friend blow up in front of [PAWN_objective], [PAWN_pronoun] deserted the military and was never seen on the Fendran homeworld again.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryMilitary</li>
+			<li>FendraBackstoryCriminal</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<workDisables>
+			<li>Artistic</li>
+			<li>Social</li>
+		</workDisables>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Melee>4</Melee>
+			<Medicine>6</Medicine>
+		</skillGains>
+		<forcedTraits>
+			<!-- Volatile -->
+			<Nerves>-2</Nerves>
+		</forcedTraits>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Smith</defName>
+		<title>steelbender</title>
+		<titleShort>steelbender</titleShort>
+		<baseDesc>[PAWN_nameDef] worked in a high-tech smithy, bending hard steel and other materials to [PAWN_possessive] will. [PAWN_pronoun] developed a knack for including personal motifs in [PAWN_possessive] work. </baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>ManualSkilled</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Crafting>6</Crafting>
+			<Artistic>3</Artistic>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Explorer</defName>
+		<title>wilderness explorer</title>
+		<titleShort>explorer</titleShort>
+		<baseDesc>Even on the Fendran homeworld, there were still wildernesses to conquer. [PAWN_nameDef] helped chart maps and guide researchers through the dangerous wilds.\n\n[PAWN_nameDef] got good at creating improvised shelter and tools far away from home.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>ManualDumb</li>
+			<li>ManualSkilled</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Shooting>2</Shooting>
+			<Melee>2</Melee>
+			<Construction>3</Construction>
+			<Crafting>3</Crafting>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Baker</defName>
+		<title>baker</title>
+		<titleShort>baker</titleShort>
+		<baseDesc>[PAWN_nameDef] was a baker in an urban city on the Fendran homeworld. [PAWN_pronoun] would wake up before sunrise each morning to prepare [PAWN_possessive] goods and still sell out by sunset.\n\n[PAWN_nameDef] spent much of [PAWN_possessive] free time fixing up and improving [PAWN_possessive] bakery.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>ManualDumb</li>
+			<li>ManualSkilled</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Cooking>5</Cooking>
+			<Construction>3</Construction>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Driver</defName>
+		<title>cargowing controller</title>
+		<titleShort>controller</titleShort>
+		<baseDesc>[PAWN_nameDef] controlled a fleet of cargowings — long-range, spaceborne hauler drones. [PAWN_possessive] job was little more than connecting dots between available drones and pending deliveries and ensuring they arrived on time. [PAWN_pronoun] spent [PAWN_possessive] breaks building and painting a small model of the drones that [PAWN_pronoun] saw every day.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<Artistic>2</Artistic>
+			<Intellectual>2</Intellectual>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Excavator</defName>
+		<title>excavator</title>
+		<titleShort>excavator</titleShort>
+		<baseDesc>Whenever uneven terrain needed to be flattened for a construction project, [PAWN_nameDef]'s team was called in.Moving tons upon tons of soil was a boring job, but [PAWN_pronoun] learned to embrace the monotony.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>ManualDumb</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Mining>5</Mining>
+		</skillGains>
+		<forcedTraits>
+			<Ascetic>0</Ascetic>
+		</forcedTraits>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_OfficeWorker</defName>
+		<title>office worker</title>
+		<titleShort>drone</titleShort>
+		<baseDesc>[PAWN_nameDef] was one of hundreds of office workers in a corporate highrise. [PAWN_possessive]'s job consisted of data entry, countless meetings, and being mismanaged by superiors.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Social</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Social>4</Social>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Counselor</defName>
+		<title>soothpaw</title>
+		<titleShort>soothpaw</titleShort>
+		<baseDesc>Soothpaws offer counseling services for Fendra in need. [PAWN_nameDef] let others lean on [PAWN_possessive] shoulder countless times, offering what advice [PAWN_pronoun] could.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryMedical</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Caring</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Medicine>1</Medicine>
+			<Social>5</Social>
+		</skillGains>
+		<forcedTraits>
+			<Kind>0</Kind>
+		</forcedTraits>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Secretary</defName>
+		<title>secretary</title>
+		<titleShort>secretary</titleShort>
+		<baseDesc>[PAWN_nameDef] was a secretary for the local government. Endless phone calls and byzantine paperwork were the bread and butter of [PAWN_possessive]'s career.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Social</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Social>3</Social>
+			<Intellectual>2</Intellectual>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- Childhood backstories -->
+
+	<!--
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_TestChild</defName>
+		<title>fendra test subject</title>
+		<titleShort>test subject</titleShort>
+		<baseDesc>[PAWN_nameDef] was a test subject for Shadow's sadistic needs in their childhood.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<Medicine>1</Medicine>
+			<Melee>1</Melee>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+	-->
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Bookkit</defName>
+		<title>book-kit</title>
+		<titleShort>book-kit</titleShort>
+		<baseDesc>[PAWN_nameDef] was fascinated by the myriad of literature [PAWN_possessive] parents kept in the house. [PAWN_pronoun] taught himself to read at an early age.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryScience</li>
+		</spawnCategories>
+		<skillGains>
+			<Intellectual>2</Intellectual>
+			<Artistic>2</Artistic>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_ChildWorker</defName>
+		<title>industrial worker</title>
+		<titleShort>worker</titleShort>
+		<baseDesc>[PAWN_nameDef] was born into a poor family and had to work for much of [PAWN_possessive] kithood. [PAWN_possessive] earliest memories were from the inner bellies of factories and workhouses.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryCriminal</li>
+		</spawnCategories>
+		<skillGains>
+			<Crafting>2</Crafting>
+			<Mining>2</Mining>
+			<Intellectual>-2</Intellectual>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_ShelteredKit</defName>
+		<title>sheltered kit</title>
+		<titleShort>shelterkit</titleShort>
+		<baseDesc>[PAWN_nameDef] had extremely protective parents that kept [PAWN_objective] sheltered from the outside world. [PAWN_pronoun] received a thorough education and curated friends, but did very little manual labor.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<Construction>-2</Construction>
+			<Mining>-2</Mining>
+			<Intellectual>2</Intellectual>
+			<Medicine>1</Medicine>
+			<Social>2</Social>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Shopkit</defName>
+		<title>shop kit</title>
+		<titleShort>shopkit</titleShort>
+		<baseDesc>[PAWN_nameDef]'s parents owned a meager shop in the city. [PAWN_pronoun] worked the front desk most of the time, learning the art of the deal. [PAWN_pronoun] took interest in some of the more ornate knick-knacks on the shelves.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<Artistic>2</Artistic>
+			<Social>4</Social>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_MedicalHelper</defName>
+		<title>medical helper</title>
+		<titleShort>medic</titleShort>
+		<baseDesc>[PAWN_nameDef] was born during a brutal civil war on the Fendran homeworld. [PAWN_pronoun] helped [PAWN_possessive] parents in an infirmary, treating anything from burns to gunshots to amputations. Patients were often happy to see [PAWN_objective] and [PAWN_possessive] enduring spirit, although [PAWN_pronoun] developed a lifelong fear of war.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryMedical</li>
+		</spawnCategories>
+		<workDisables>
+			<li>Violent</li>
+		</workDisables>
+		<skillGains>
+			<Medicine>5</Medicine>
+		</skillGains>
+		<forcedTraits>
+			<Kind>0</Kind>
+		</forcedTraits>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Tinkerer</defName>
+		<title>tinkerer</title>
+		<titleShort>tinkerer</titleShort>
+		<baseDesc>Like most kits, [PAWN_nameDef] had a knack for taking things apart. Unlike most kits, [PAWN_pronoun] could also put them back together. [PAWN_pronoun] developed a hobby for tinkering with small machinery and made a small allowance selling what [PAWN_pronoun] made.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryScience</li>
+		</spawnCategories>
+		<skillGains>
+			<Crafting>4</Crafting>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Unwanted</defName>
+		<title>unwanted kit</title>
+		<titleShort>survivor</titleShort>
+		<baseDesc>[PAWN_nameDef]'s birth was an accident, and [PAWN_possessive] parents threw [PAWN_objective] into a dumpster at a very young age. [PAWN_pronoun] was able to survive alone, relying on [PAWN_possessive] own skills rather than trusting anyone else for help.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryCriminal</li>
+		</spawnCategories>
+		<skillGains>
+			<Melee>2</Melee>
+			<Cooking>2</Cooking>
+			<Medicine>2</Medicine>
+		</skillGains>
+		<forcedTraits>
+			<!-- Steadfast -->
+			<Nerves>1</Nerves>
+		</forcedTraits>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Savant</defName>
+		<title>savant</title>
+		<titleShort>savant</titleShort>
+		<baseDesc>[PAWN_nameDef] suffered a traumatic injury at a young age that left [PAWN_objective] mute for most of [PAWN_possessive] kithood. [PAWN_pronoun] turned out to be really good at playing the piano afterward.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<workDisables>
+			<li>Social</li>
+		</workDisables>
+		<skillGains>
+			<Artistic>5</Artistic>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_CityKit</defName>
+		<title>city kit</title>
+		<titleShort>city kit</titleShort>
+		<baseDesc>[PAWN_nameDef] was born in an urban city. [PAWN_possessive] early years were spent exploring the sprawling environment around [PAWN_objective] with [PAWN_possessive] friends.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryCriminal</li>
+		</spawnCategories>
+		<skillGains>
+			<Social>3</Social>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Scout</defName>
+		<title>rural scout</title>
+		<titleShort>scout</titleShort>
+		<baseDesc>[PAWN_nameDef] was born in a very rural town on the Fendran homeworld where food was relatively scarce. [PAWN_pronoun] was remarkably light on [PAWN_possessive] feet and helped scout for animal herds for the hunters to pursue. This meant [PAWN_pronoun] wasn't able to socialize with other kits as frequently.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryCriminal</li>
+		</spawnCategories>
+		<skillGains>
+			<Social>-2</Social>
+			<Animals>4</Animals>
+		</skillGains>
+		<forcedTraits>
+			<SpeedOffset>2</SpeedOffset>
+		</forcedTraits>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Gamer</defName>
+		<title>gamer</title>
+		<titleShort>gamer</titleShort>
+		<baseDesc>[PAWN_nameDef] was swept up in the various fads and trends in the video game industry. [PAWN_pronoun] would often skip class to play new games, and found several of [PAWN_possessive] closest friends online.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<workDisables>
+			<li>Intellectual</li>
+		</workDisables>
+		<skillGains>
+			<Social>4</Social>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_CountryKit</defName>
+		<title>country kit</title>
+		<titleShort>country kit</titleShort>
+		<baseDesc>[PAWN_nameDef] was born on a ranch growing livestock and crops. [PAWN_pronoun] helped tend to both as [PAWN_pronoun] grew up.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<Animals>3</Animals>
+			<Plants>3</Plants>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Brawler</defName>
+		<title>hooligan</title>
+		<titleShort>hooligan</titleShort>
+		<baseDesc>[PAWN_nameDef] spent most of [PAWN_possessive] kithood getting into fights, first on the playground and then in the back alleys. [PAWN_pronoun] learned to hold a weapon like it was an extension of [PAWN_possessive] arm.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryCriminal</li>
+		</spawnCategories>
+		<workDisables>
+			<li>Caring</li>
+		</workDisables>
+		<skillGains>
+			<Shooting>3</Shooting>
+			<Melee>3</Melee>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_LonelyChild</defName>
+		<title>lonely kit</title>
+		<titleShort>loner</titleShort>
+		<baseDesc>[PAWN_nameDef] was the eleventh kit in [PAWN_possessive] family. [PAWN_pronoun] didn't get much attention from [PAWN_possessive] parents and siblings, and found the family's pets to be better company anyway. [PAWN_pronoun] made many drawings of them.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<Animals>4</Animals>
+			<Social>-2</Social>
+			<Artistic>2</Artistic>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Heir</defName>
+		<title>pampered kit</title>
+		<titleShort>pampered</titleShort>
+		<baseDesc>[PAWN_nameDef] was born into an influential family on the Fendran homeworld. Many of [PAWN_possessive] needs were taken care of, giving [PAWN_objective] plenty of time to learn proper decorum and pursue an education, although [PAWN_pronoun] was not in contention to inherit the family wealth.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryScience</li>
+		</spawnCategories>
+		<workDisables>
+			<li>ManualDumb</li>
+		</workDisables>
+		<skillGains>
+			<Intellectual>3</Intellectual>
+			<Social>5</Social>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+</Defs>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- ========== Fendra Base ========== -->
+
+    <PawnKindDef Name="FendraBase" Abstract="True">
+        <race>Fendra</race>
+        <defaultFactionType>FendraFaction</defaultFactionType>
+        <!-- Fendra are generally not druggies. -->
+        <chemicalAddictionChance>0.01</chemicalAddictionChance>
+        <invNutrition>2.55</invNutrition>
+        <apparelTags>
+            <li>IndustrialBasic</li>
+            <li>IndustrialAdvanced</li>
+            <li>FendraClothing</li>
+        </apparelTags>
+        <itemQuality>Normal</itemQuality>
+        <backstoryCategories>
+            <li>FendraBackstory</li>
+        </backstoryCategories>
+        <initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>	
+        <apparelAllowHeadgearChance>0.3</apparelAllowHeadgearChance>
+    </PawnKindDef>
+
+    <!-- ========== Fendra Citizens ========== -->
+
+    <PawnKindDef ParentName="FendraBase" Name="FendraCitizenBase">
+        <defName>FendraCitizen</defName>
+        <label>citizen</label>
+        <combatPower>50</combatPower>
+        <isFighter>false</isFighter>
+        <gearHealthRange>0.7~1.5</gearHealthRange>
+        <weaponTags>
+            <li>MedievalMeleeBasic</li>
+        </weaponTags>
+        <weaponMoney>100~150</weaponMoney>
+        <apparelMoney>200~300</apparelMoney>
+        <inventoryOptions>
+			<skipChance>0.75</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>25</min>
+						<max>70</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>	
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="FendraCitizenBase">
+        <defName>FendraVillager</defName>
+        <label>villager</label>
+        <combatPower>40</combatPower>
+        <itemQuality>Poor</itemQuality>
+        <weaponMoney>100~150</weaponMoney>
+        <apparelMoney>200~300</apparelMoney>
+        <inventoryOptions></inventoryOptions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="FendraCitizenBase">
+        <defName>FendraArtisan</defName>
+        <label>artisan</label>
+        <combatPower>60</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <weaponMoney>200~300</weaponMoney>
+        <apparelMoney>400~600</apparelMoney>
+    </PawnKindDef>
+
+    <!-- Doctors, they can afford good clothes but no interest in weapons. -->
+    <PawnKindDef ParentName="FendraCitizenBase">
+        <defName>FendraWhitepaw</defName>
+        <label>whitepaw</label>
+        <combatPower>40</combatPower>
+        <itemQuality>Good</itemQuality>
+        <requiredWorkTags>
+            <li>Caring</li>
+        </requiredWorkTags>
+        <backstoryCategories>
+            <li>FendraBackstoryMedical</li>
+        </backstoryCategories>
+        <apparelMoney>700~1000</apparelMoney>
+        <skills>
+            <li>
+                <skill>Medicine</skill>
+                <range>8~13</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="FendraCitizenBase">
+        <defName>FendraLowlife</defName>
+        <label>lowlife</label>
+        <combatPower>20</combatPower>
+        <itemQuality>Awful</itemQuality>
+        <weaponMoney>75~50</weaponMoney>
+        <apparelMoney>50~100</apparelMoney>
+        <inventoryOptions></inventoryOptions>
+        <chemicalAddictionChance>0.5</chemicalAddictionChance>
+        <backstoryCategories>
+            <li>FendraBackstoryCriminal</li>
+        </backstoryCategories>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="FendraCitizenBase">
+        <defName>FendraScientist</defName>
+        <label>scientist</label>
+        <combatPower>40</combatPower>
+        <backstoryCategories>
+            <li>FendraBackstoryScience</li>
+        </backstoryCategories>
+        <apparelMoney>700~1000</apparelMoney>
+        <skills>
+            <li>
+                <skill>Intellectual</skill>
+                <range>8~13</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+    
+    <!-- ========== Fendra Military/Guards ========== -->
+
+    <PawnKindDef ParentName="FendraBase" Name="FendraGuardBase">
+        <defName>FendraGuard</defName>
+        <label>enforcer</label>
+        <combatPower>80</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <isFighter>true</isFighter>
+        <gearHealthRange>0.7~2</gearHealthRange>
+        <backstoryCategories>
+            <li>FendraBackstoryMilitary</li>
+        </backstoryCategories>
+        <requiredWorkTags>
+            <li>Violent</li>
+        </requiredWorkTags>
+        <weaponTags>
+            <li>SimpleGun</li>
+            <li>MedievalMeleeAdvanced</li>
+        </weaponTags>
+        <apparelTags>
+            <li>FendraClothing</li>
+            <li>IndustrialBasic</li>
+            <li>IndustrialAdvanced</li>
+            <li>IndustrialMilitaryBasic</li>
+        </apparelTags>
+        <minGenerationAge>18</minGenerationAge>
+        <maxGenerationAge>40</maxGenerationAge>
+        <weaponMoney>300~600</weaponMoney>
+        <apparelMoney>400~600</apparelMoney>
+        <techHediffsChance>0.1</techHediffsChance>
+        <techHediffsMoney>300~600</techHediffsMoney>
+        <techHediffsTags>
+          <li>Normal</li>
+          <li>Simple</li>
+          <li>ImplantEmpireCommon</li>
+        </techHediffsTags>
+        <initialWillRange>2~5</initialWillRange>
+        <initialResistanceRange>7~15</initialResistanceRange>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="FendraGuardBase">
+        <defName>FendraScout</defName>
+        <label>scout</label>
+        <gearHealthRange>0.5~2</gearHealthRange>
+        <combatPower>30</combatPower>
+        <weaponMoney>100~200</weaponMoney>
+        <apparelMoney>200~400</apparelMoney>
+        <weaponTags Inherit="False">
+            <li>SimpleGun</li>
+            <li>MedievalMeleeBasic</li>
+            <li>MedievalMeleeDecent</li>
+        </weaponTags>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="FendraGuardBase" Name="FendraMilitaryBase">
+        <defName>FendraRecruit</defName>
+        <label>recruit</label>
+        <combatPower>60</combatPower>
+        <gearHealthRange>0.8~1.5</gearHealthRange>
+        <weaponMoney>300~500</weaponMoney>
+        <apparelMoney>400~700</apparelMoney>
+        <apparelAllowHeadgearChance>0.8</apparelAllowHeadgearChance>
+        <weaponTags Inherit="False">
+            <li>Gun</li>
+        </weaponTags>
+        <apparelTags>
+            <li>FendraClothing</li>
+            <li>IndustrialBasic</li>
+            <li>IndustrialAdvanced</li>
+            <li>IndustrialMilitaryBasic</li>
+            <li>IndustrialMilitaryAdvanced</li>
+        </apparelTags>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>5~15</range>
+            </li>
+            <li>
+                <skill>Melee</skill>
+                <range>4~8</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="FendraMilitaryBase">
+        <defName>FendraGunner</defName>
+        <label>gunner</label>
+        <combatPower>90</combatPower>
+        <weaponMoney>800~1000</weaponMoney>
+        <apparelMoney>700~1000</apparelMoney>
+        <weaponTags Inherit="False">
+            <li>Gun</li>
+        </weaponTags>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="FendraMilitaryBase">
+        <defName>FendraBreacher</defName>
+        <label>breacher</label>
+        <combatPower>100</combatPower>
+        <weaponMoney>700~1000</weaponMoney>
+        <apparelMoney>900~1000</apparelMoney>
+        <apparelTags Inherit="False">
+            <li>FendraClothing</li>
+            <li>IndustrialBasic</li>
+            <li>IndustrialAdvanced</li>
+            <li>IndustrialMilitaryBasic</li>
+            <li>IndustrialMilitaryAdvanced</li>
+            <li>BeltDefensePop</li>
+        </apparelTags>
+        <weaponTags Inherit="False">
+            <li>ShortShots</li>
+        </weaponTags>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="FendraMilitaryBase">
+        <defName>FendraSlasher</defName>
+        <label>slasher</label>
+        <combatPower>120</combatPower>
+        <weaponMoney>700~1000</weaponMoney>
+        <apparelMoney>1000~1200</apparelMoney>
+        <apparelTags Inherit="False">
+            <li>FendraClothing</li>
+            <li>IndustrialBasic</li>
+            <li>IndustrialAdvanced</li>
+            <li>IndustrialMilitaryBasic</li>
+            <li>IndustrialMilitaryAdvanced</li>
+            <li>BeltDefensePop</li>
+            <li>BeltDefense</li>
+        </apparelTags>
+        <weaponTags Inherit="False">
+            <li>MedievalMeleeDecent</li>
+            <li>MedievalMeleeAdvanced</li>
+          </weaponTags>
+    </PawnKindDef>
+
+    <!-- slightly less armor since they're not meant to be frontline -->
+    <PawnKindDef ParentName="FendraMilitaryBase">
+        <defName>FendraSharpclaw</defName>
+        <label>sharpclaw</label>
+        <combatPower>120</combatPower>
+        <weaponMoney>800~1200</weaponMoney>
+        <apparelMoney>400~800</apparelMoney>
+        <weaponTags Inherit="False">
+            <li>SniperRifle</li>
+        </weaponTags>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>8~16</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="FendraMilitaryBase">
+        <defName>FendraHeavy</defName>
+        <label>heavy gunner</label>
+        <combatPower>150</combatPower>
+        <weaponMoney>1200~1500</weaponMoney>
+        <apparelMoney>1200~1500</apparelMoney>
+        <weaponTags Inherit="False">
+            <li>GunHeavy</li>
+        </weaponTags>
+        <skills>
+        <li>
+            <skill>Shooting</skill>
+            <range>8~16</range>
+        </li>
+        </skills>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="FendraMilitaryBase">
+        <defName>FendraCaptain</defName>
+        <label>captain</label>
+        <combatPower>160</combatPower>
+        <weaponMoney>1500~2000</weaponMoney>
+        <apparelMoney>1200~1500</apparelMoney>
+        <weaponTags Inherit="False">
+            <li>IndustrialGunAdvanced</li>
+        </weaponTags>
+        <apparelRequired>
+            <li>Apparel_Beret</li>
+        </apparelRequired>
+        <initialWillRange>5~10</initialWillRange>
+        <initialResistanceRange>17~25</initialResistanceRange>
+    </PawnKindDef>
+
+    <!-- ========== Fendra Traders ========== -->
+
+    <PawnKindDef ParentName="FendraBase" Name="FendraTraderBase">
+        <defName>FendraTrader</defName>
+        <label>trader</label>
+        <combatPower>60</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <trader>true</trader>
+        <gearHealthRange>1~1</gearHealthRange>
+        <backstoryCategories>
+            <li>FendraBackstory</li>
+        </backstoryCategories>
+        <weaponTags>
+            <li>Gun</li>
+        </weaponTags>
+        <weaponMoney>200~300</weaponMoney>
+        <apparelMoney>400~800</apparelMoney>
+        <techHediffsChance>0.1</techHediffsChance>
+        <techHediffsMoney>500~800</techHediffsMoney>
+        <techHediffsTags>
+          <li>Normal</li>
+          <li>Simple</li>
+          <li>ImplantEmpireCommon</li>
+        </techHediffsTags>
+    </PawnKindDef>
+
+    <!-- Higher-tier trader. -->
+    <PawnKindDef ParentName="FendraTraderBase">
+        <defName>FendraMerchant</defName>
+        <label>merchant</label>
+        <combatPower>100</combatPower>
+        <itemQuality>Good</itemQuality>
+        <backstoryCategories>
+            <li>FendraBackstory</li>
+        </backstoryCategories>
+        <weaponTags>
+            <li>Gun</li>
+        </weaponTags>
+        <weaponMoney>400~600</weaponMoney>
+        <apparelMoney>500~1000</apparelMoney>
+        <techHediffsChance>0.1</techHediffsChance>
+        <techHediffsMoney>700~1000</techHediffsMoney>
+        <techHediffsTags>
+          <li>Normal</li>
+          <li>Simple</li>
+          <li>ImplantEmpireCommon</li>
+        </techHediffsTags>
+        <skills>
+            <li>
+                <skill>Social</skill>
+                <range>8~13</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+    <!-- ========== Fendra Leaders ========== -->
+
+    <PawnKindDef ParentName="FendraBase" Name="FendraLeaderBase">
+        <defName>FendraMinister</defName>
+        <label>minister</label>
+        <combatPower>75</combatPower>
+        <itemQuality>Good</itemQuality>
+        <isFighter>false</isFighter>
+        <factionLeader>true</factionLeader>
+        <minGenerationAge>30</minGenerationAge>
+        <gearHealthRange>1~1.5</gearHealthRange>
+        <backstoryCategories>
+            <li>FendraBackstoryPolitical</li>
+        </backstoryCategories>
+        <apparelTags>
+            <li>IndustrialMilitaryBasic</li>
+            <li>FendraClothing</li>
+            <li>BeltDefensePop</li>
+        </apparelTags>
+        <weaponTags>
+            <li>SimpleGun</li>
+        </weaponTags>
+        <weaponMoney>700~1200</weaponMoney>
+        <apparelMoney>500~1200</apparelMoney>
+        <techHediffsChance>0.06</techHediffsChance>
+        <techHediffsMoney>400~800</techHediffsMoney>
+        <techHediffsTags>
+          <li>Normal</li>
+          <li>Simple</li>
+          <li>ImplantEmpireCommon</li>
+        </techHediffsTags>
+        <inventoryOptions>
+			<skipChance>0.75</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>300</min>
+						<max>550</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>	
+    </PawnKindDef>
+</Defs>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<FactionDef ParentName="FactionBase">
+		<defName>FendraFaction</defName>
+		<label>Fendra nation</label>
+		<description>A community of the small, canine Fendra race.</description>
+		<pawnSingular>Fendra</pawnSingular>
+		<pawnsPlural>Fendra</pawnsPlural>
+		<listOrderPriority>30</listOrderPriority>
+		<settlementGenerationWeight>0.55</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>prime minister</leaderTitle>
+		<techLevel>Industrial</techLevel>
+		<factionNameMaker>NamerFendraFaction</factionNameMaker>
+		<settlementNameMaker>NamerFendraSettlement</settlementNameMaker>
+
+		<allowedCultures>
+			<li>Astropolitan</li>
+			<li>Rustican</li>
+		</allowedCultures>
+		<!-- Fendra society is deeply rooted in collectivism. -->
+		<requiredMemes>
+			<li MayRequire="Ludeon.Rimworld.Ideology">Collectivist</li>
+		</requiredMemes>
+		<!-- Fendra are used to altering the world around them. -->
+		<disallowedMemes>
+			<li MayRequire="Ludeon.Rimworld.Ideology">Blindsight</li>
+			<li MayRequire="Ludeon.Rimworld.Ideology">NaturePrimacy</li>
+		</disallowedMemes>
+		<!-- Emphasis on generic theism and pure ideology since Fendra are somewhat secular. -->
+		<structureMemeWeights>
+			<Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistEmbodied>
+			<Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">10</Structure_Ideological>
+			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">0.5</Structure_Archist>
+			<Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginChristian>
+			<Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginIslamic>
+			<Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">0.1</Structure_OriginHindu>
+			<Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">0.1</Structure_OriginBuddhist>
+		</structureMemeWeights>
+		
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>FendraBackstory</li>
+				</categories>
+				<commonality>0.9</commonality>
+			</li>
+			<li>
+				<!-- Criminal backstories are also in the normal pool, but this guarantees that a certain amount of them are criminals. This is a rimworld after all. -->
+				<categories>
+					<li>FendraBackstoryCriminal</li>
+				</categories>
+				<commonality>0.1</commonality>
+			</li>
+		</backstoryFilters>
+
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+			  <li>(0,35)</li>
+			  <li>(70, 50)</li>
+			  <li>(700, 100)</li>
+			  <li>(1300, 150)</li>
+			  <li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+
+		<raidCommonalityFromPointsCurve>
+			<points>
+			  <li>(0, 1)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+
+		<fixedLeaderKinds>
+			<li>FendraMinister</li>
+		</fixedLeaderKinds>
+		<caravanTraderKinds>
+			<li>Caravan_Outlander_BulkGoods</li>
+			<li>Caravan_Outlander_CombatSupplier</li>
+			<li>Caravan_Outlander_Exotic</li>
+			<li>Caravan_Fendra_Research</li>
+		</caravanTraderKinds>
+		<visitorTraderKinds>
+			<li>Visitor_Outlander_Standard</li>
+		</visitorTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Outlander_Standard</li>
+		</baseTraderKinds>
+		<allowedArrivalTemperatureRange>-10~45</allowedArrivalTemperatureRange>
+		<raidLootMaker>FendraRaidLootMaker</raidLootMaker>
+
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<FendraScout>10</FendraScout>
+					<FendraGuard>10</FendraGuard>
+					<FendraRecruit>30</FendraRecruit>
+					<FendraGunner>30</FendraGunner>
+					<FendraBreacher>20</FendraBreacher>
+					<FendraSlasher>15</FendraSlasher>
+					<FendraSharpclaw>10</FendraSharpclaw>
+					<FendraHeavy>10</FendraHeavy>
+					<FendraCaptain>5</FendraCaptain>
+				</options>
+			</li>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<FendraCitizen>100</FendraCitizen>
+					<FendraArtisan>25</FendraArtisan>
+					<FendraWhitepaw>10</FendraWhitepaw>
+					<FendraScout>10</FendraScout>
+					<FendraRecruit>10</FendraRecruit>
+					<FendraScientist>10</FendraScientist>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<FendraTrader>50</FendraTrader>
+					<FendraMerchant>10</FendraMerchant>
+				</traders>
+				<carriers>
+					<Horse>3</Horse>
+					<Muffalo>2</Muffalo>
+				</carriers>
+				<guards>
+					<FendraScout>10</FendraScout>
+					<FendraGuard>20</FendraGuard>
+					<FendraGunner>20</FendraGunner>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>			
+				<options>
+					<FendraCitizen>100</FendraCitizen>
+					<FendraArtisan>25</FendraArtisan>
+					<FendraWhitepaw>10</FendraWhitepaw>
+					<FendraLowlife>10</FendraLowlife>	
+					<FendraScientist>10</FendraScientist>
+					
+					<FendraGuard>50</FendraGuard>
+					<FendraGunner>20</FendraGunner>
+					<FendraSharpclaw>10</FendraSharpclaw>
+					<FendraCaptain>5</FendraCaptain>
+
+					<FendraMinister>5</FendraMinister>
+				</options>
+			</li>
+		</pawnGroupMakers>
+
+		<factionIconPath>World/FendraFaction/FendraTown</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<colorSpectrum>
+			<li>(180, 180, 180)</li>
+			<li>(225, 225, 225)</li>				
+		</colorSpectrum>
+	</FactionDef>
+
+	<!-- Auxiliary things for the fendra faction -->
+
+	<ThingSetMakerDef>
+		<defName>FendraRaidLootMaker</defName>
+		<root Class="ThingSetMaker_MarketValue">
+		  <fixedParams>
+			<filter>
+			  <thingDefs>
+				<li>Silver</li>
+				<li>Gold</li>
+				<li>MedicineIndustrial</li>
+				<li>ComponentIndustrial</li>
+				<li>MealSurvivalPack</li>
+				<li>Neutroamine</li>
+			  </thingDefs>
+			</filter>
+		  </fixedParams>
+		</root>
+	  </ThingSetMakerDef>
+
+	  <!-- An even more exotic caravan. Sells much more high-end things like techprints and prosthetics, and the resources needed to make things like the multianalyzer, but less of other things. -->
+	  <TraderKindDef>
+		<defName>Caravan_Fendra_Research</defName>
+		<label>scientist caravan</label>
+		<stockGenerators>
+	
+		  <!-- Resources -->
+		  <li Class="StockGenerator_SingleDef">
+			<thingDef>Silver</thingDef>
+			<countRange>750~1200</countRange>
+		  </li>
+		  <li Class="StockGenerator_SingleDef">
+			<thingDef>ComponentIndustrial</thingDef>
+			<countRange>3~10</countRange>
+		  </li>
+		  <li Class="StockGenerator_SingleDef">
+			<thingDef>ComponentSpacer</thingDef>
+			<countRange>1~5</countRange>
+		  </li>
+		  <li Class="StockGenerator_SingleDef">
+			<thingDef>Plasteel</thingDef>
+			<countRange>30~100</countRange>
+		  </li>
+		  <li Class="StockGenerator_SingleDef">
+			<thingDef>Gold</thingDef>
+			<countRange>30~70</countRange>
+		  </li>
+		  <li Class="StockGenerator_SingleDef">
+			<thingDef>MedicineUltratech</thingDef>
+			<countRange>1~5</countRange>
+		  </li>
+		  
+		  <!-- Drugs -->
+		  <!-- none -->
+		  
+		  <!-- Techprints -->
+		  <li Class="StockGenerator_Techprints">
+			<countRange>0~4</countRange>
+		  </li>
+		  
+		  <!-- Weapons -->
+		  <!-- none -->
+			
+		  <!-- Apparel -->
+		  <li Class="StockGenerator_SingleDef">
+			<thingDef>FendraBodysuit</thingDef>
+			<countRange>1~2</countRange>
+		  </li>
+		  <!-- none -->
+		  
+		  <!-- Implants -->
+		  <li Class="StockGenerator_Tag">
+			<tradeTag>TechHediff</tradeTag>
+			<thingDefCountRange>5</thingDefCountRange>
+			<countRange>1~3</countRange>
+		  </li>
+		  
+		  <!-- Buildings -->
+		  <li Class="StockGenerator_Tag">
+			<tradeTag>Television</tradeTag>
+			<thingDefCountRange>1~2</thingDefCountRange>
+			<countRange>1~1</countRange>
+		  </li>
+		  
+		  <!-- Exotic -->
+		  <li Class="StockGenerator_Tag">
+			<tradeTag>ExoticMisc</tradeTag>
+			<thingDefCountRange>2~2</thingDefCountRange>
+			<countRange>1~1</countRange>
+			<excludedThingDefs>
+			  <li>MedicineUltratech</li> <!-- already handled by single def -->
+			  <li>ComponentSpacer</li> <!-- already handled by single def -->
+			</excludedThingDefs>
+			<customCountRanges>
+			  <Luciferium>5~20</Luciferium>
+			  <Hyperweave>30~100</Hyperweave>
+			</customCountRanges>
+		  </li>
+		  <li Class="StockGenerator_Tag">
+			<tradeTag>Artifact</tradeTag>
+			<thingDefCountRange>2~2</thingDefCountRange>
+			<countRange>1~1</countRange>
+		  </li>
+	
+		  <!-- Genepacks -->
+		  <li MayRequire="Ludeon.RimWorld.Biotech" Class="StockGenerator_SingleDef">
+			<thingDef>Genepack</thingDef>
+			<countRange>4~5</countRange>
+		  </li>
+		  
+		  <!-- Slaves -->
+		  <!-- none -->
+		  
+		  <!-- Animals -->
+		  <li Class="StockGenerator_Animals">
+			<tradeTagsSell>
+			  <li>AnimalUncommon</li>
+			  <li>AnimalFighter</li>
+			  <li>AnimalFarm</li>
+			  <li>AnimalPet</li>
+			</tradeTagsSell>
+			<tradeTagsBuy>
+			  <li>AnimalExotic</li>
+			</tradeTagsBuy>
+			<kindCountRange>3~3</kindCountRange>
+			<countRange>1~3</countRange>
+			<createMatingPair>
+			  <li>AnimalFarm</li>
+			</createMatingPair>
+		  </li>
+	
+		  <!-- Archite capsule -->
+		  <li MayRequire="Ludeon.RimWorld.Biotech" Class="StockGenerator_SingleDef">
+			<thingDef>ArchiteCapsule</thingDef>
+			<countRange>-8~1</countRange> <!-- 10% chance -->
+		  </li>
+	
+		  <!-- Deathrest capacity serum -->
+		  <li MayRequire="Ludeon.RimWorld.Biotech" Class="StockGenerator_SingleDef">
+			<thingDef>DeathrestCapacitySerum</thingDef>
+			<countRange>0~1</countRange>
+		  </li>
+		  
+		  <!-- Buying -->
+		  <li Class="StockGenerator_BuyExpensiveSimple" />
+		  <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+		  <li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
+		  <li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
+		  <li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+		  <li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>
+		  <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+		  
+		</stockGenerators>
+	  </TraderKindDef>
+</Defs>
