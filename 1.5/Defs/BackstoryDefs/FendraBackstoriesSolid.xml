@@ -141,13 +141,11 @@
 		<forcedTraitsChance>
 			<!-- 50% chance to have Steadfast, otherwise Iron-willed -->
 			<li>
-				<defName>Nerves</defName>
-				<degree>1</degree>
+				<defName Degree="1">Nerves</defName>
 				<chance>50</chance>
 			</li>
 			<li>
-				<defName>Nerves</defName>
-				<degree>2</degree>
+				<defName Degree="2">Nerves</defName>
 			</li>
 		</forcedTraitsChance>
 		<linkedBackstory>Fendra_StrandedSurvivor</linkedBackstory>

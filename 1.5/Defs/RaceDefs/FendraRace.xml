@@ -86,11 +86,16 @@
             <bodyAddons>
                 <li>
                     <path>Things/Fendra/Tail/FendraTail</path>
-                    <bodyPart>FendraTail</bodyPart>
+
+                    <conditions>
+                        <BodyPart>
+                            <bodyPart>FendraTail</bodyPart>
+                            <drawWithoutPart>false</drawWithoutPart>
+                        </BodyPart>
+                    </conditions>
+                    
                     <colorChannel>skin</colorChannel>
                     <inFrontOfBody>false</inFrontOfBody>
-                    <drawnInBed>false</drawnInBed>
-                    <drawnOnGround>true</drawnOnGround>
                     <defaultOffset>Tail</defaultOffset>
                     <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
                     <offsets>
