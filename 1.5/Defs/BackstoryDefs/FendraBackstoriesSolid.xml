@@ -13,14 +13,8 @@
 			<li>FendraBackstory</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Crafting</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Construction</key>
-				<value>6</value>
-			</li>
+			<Crafting>4</Crafting>
+			<Construction>6</Construction>
 		</skillGains>
 		<shuffleable>false</shuffleable>
 	</AlienRace.AlienBackstoryDef>
@@ -35,18 +29,9 @@
 			<li>FendraBackstory</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Construction</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Medicine</key>
-				<value>3</value>
-			</li>
-			<li>
-				<key>Artistic</key>
-				<value>4</value>
-			</li>
+			<Construction>4</Construction>
+			<Medicine>3</Medicine>
+			<Artistic>4</Artistic>
 		</skillGains>
 		<shuffleable>false</shuffleable>
 	</AlienRace.AlienBackstoryDef>
@@ -62,18 +47,9 @@
 			<li>FendraBackstoryMilitary</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Shooting</key>
-				<value>7</value>
-			</li>
-			<li>
-				<key>Melee</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Medicine</key>
-				<value>4</value>
-			</li>
+			<Shooting>7</Shooting>
+			<Melee>4</Melee>
+			<Medicine>4</Medicine>
 		</skillGains>
 		<forcedTraits>
 			<Bloodlust>0</Bloodlust>
@@ -102,14 +78,8 @@
 			<li>Cooking</li>
 		</workDisables>
 		<skillGains>
-			<li>
-				<key>Medicine</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Social</key>
-				<value>3</value>
-			</li>
+			<Medicine>4</Medicine>
+			<Social>3</Social>
 		</skillGains>
 		<shuffleable>false</shuffleable>
 	</AlienRace.AlienBackstoryDef>
@@ -125,14 +95,8 @@
 			<li>FendraBackstory</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Intellectual</key>
-				<value>2</value>
-			</li>
-			<li>
-				<key>Crafting</key>
-				<value>2</value>
-			</li>
+			<Intellectual>2</Intellectual>
+			<Crafting>2</Crafting>
 		</skillGains>
 		<forcedTraits>
 			<Undergrounder>0</Undergrounder>
@@ -151,14 +115,8 @@
 			<li>FendraBackstoryMilitary</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Shooting</key>
-				<value>3</value>
-			</li>
-			<li>
-				<key>Melee</key>
-				<value>2</value>
-			</li>
+			<Shooting>3</Shooting>
+			<Melee>2</Melee>
 		</skillGains>
 		<linkedBackstory>Fendra_SuperSoldier</linkedBackstory>
 		<!-- 10% as common as the other backstories -->
@@ -176,18 +134,9 @@
 			<li>FendraBackstory</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Plants</key>
-				<value>2</value>
-			</li>
-			<li>
-				<key>Cooking</key>
-				<value>2</value>
-			</li>
-			<li>
-				<key>Crafting</key>
-				<value>2</value>
-			</li>
+			<Plants>2</Plants>
+			<Cooking>2</Cooking>
+			<Crafting>2</Crafting>
 		</skillGains>
 		<forcedTraitsChance>
 			<!-- 50% chance to have Steadfast, otherwise Iron-willed -->

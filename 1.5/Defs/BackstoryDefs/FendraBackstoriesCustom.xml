@@ -14,14 +14,8 @@
 			<li>FendraBackstory</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Social</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Medicine</key>
-				<value>7</value>
-			</li>
+			<Social>4</Social>
+			<Medicine>7</Medicine>
 		</skillGains>
 		<forcedTraits>
 			<Kind>0</Kind>
@@ -47,18 +41,9 @@
 			<li>FendraBackstory</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Social</key>
-				<value>-1</value>
-			</li>
-			<li>
-				<key>Medicine</key>
-				<value>2</value>
-			</li>
-			<li>
-				<key>Intellectual</key>
-				<value>2</value>
-			</li>
+			<Social>-1</Social>
+			<Medicine>2</Medicine>
+			<Intellectual>2</Intellectual>
 		</skillGains>
 		<shuffleable>false</shuffleable>
 	</AlienRace.AlienBackstoryDef>
