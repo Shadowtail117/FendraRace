@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+<AlienRace.ThingDef_AlienRace ParentName="Human">
     <defName>Fendra</defName>
     <label>fendra</label>
     <description>Fendra are a race of short, biped canines. Despite the ample fur on their bodies, they perform very poorly in cold conditions and require a fair amount of temperature regulation to stay comfortable and healthy.</description>
