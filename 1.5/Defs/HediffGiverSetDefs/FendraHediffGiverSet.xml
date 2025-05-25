@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffGiverSetDef>
+		<defName>FendraHediffGiverSet</defName>
+		<hediffGivers>
+			<li Class="HediffGiver_Bleeding">
+				<hediff>FendraClotting</hediff>
+			</li>
+			<!--
+			<li Class="HediffGiver_Birthday">
+				<hediff>FendraClotting</hediff>
+				 More or less guaranteed to get it within the first year or so of being born. 
+				 Hacky method of ensuring everyone gets it. 
+				<ageFractionChanceCurve>
+					<points>
+						<li>(0.01, 0)</li>
+						<li>(0.02, 69420)</li>
+					</points>
+				</ageFractionChanceCurve>
+			</li>
+			-->
+		</hediffGivers>
+	</HediffGiverSetDef>
+</Defs>

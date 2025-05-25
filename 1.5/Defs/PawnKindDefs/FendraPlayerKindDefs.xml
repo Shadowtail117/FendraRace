@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <PawnKindDef ParentName="BasePlayerPawnKind">
+        <defName>FendraColonist</defName>
+        <label>colonist</label>
+        <race>Fendra</race>
+        <defaultFactionType>FendraPlayerColony</defaultFactionType>
+
+        <!-- Lower than the default since fendra are weaker.-->
+        <initialResistanceRange>5~10</initialResistanceRange>
+
+        <!-- Same restrictions as normal human colonists for now. -->
+        <apparelTags>
+            <li>IndustrialBasic</li>
+        </apparelTags>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+
+        <apparelMoney>360~600</apparelMoney>
+        <weaponMoney>0~0</weaponMoney>
+
+        <techHediffsChance>0.03</techHediffsChance>
+        <techHediffsMoney>50~1000</techHediffsMoney>
+        <techHediffsTags>
+            <li>Normal</li>
+            <li>Simple</li>
+        </techHediffsTags>
+    </PawnKindDef>
+</Defs>

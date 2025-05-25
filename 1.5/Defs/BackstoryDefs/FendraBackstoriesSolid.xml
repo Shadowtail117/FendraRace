@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Adulthood backstories-->
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_ShipEngineer</defName>
+		<title>ship engineer</title>
+		<titleShort>engineer</titleShort>
+		<baseDesc>After an asteroid grazed the ship's hull, [PAWN_nameDef] worked alongside the ship's engineers to repair the breach. [PAWN_pronoun] was recognized for [PAWN_possessive] bravery and was allowed to become an official member of the ship's engineering staff.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>6</value>
+			</li>
+		</skillGains>
+		<shuffleable>false</shuffleable>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_StrandedSurvivor</defName>
+		<title>colony settler</title>
+		<titleShort>settler</titleShort>
+		<baseDesc>After being rescued, [PAWN_nameDef] wrote a bestselling book about [PAWN_possessive] experience. [PAWN_pronoun] decided to help found new colonies, relying on [PAWN_possessive] experience, and more importantly [PAWN_possessive] unshakeable bond with [PAWN_possessive] sibling.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<shuffleable>false</shuffleable>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_SuperSoldier</defName>
+		<title>hellfur</title>
+		<titleShort>hellfur</titleShort>
+		<baseDesc>After [PAWN_nameDef] completed [PAWN_possessive] training, [PAWN_pronoun] became a hellfur -- one of only a few hundred supersoldiers trained in elite combat skills. [PAWN_pronoun] often went in solo to complete missions that would have otherwise taken an entire squad.\n\n[PAWN_pronoun] is good at commanding, but only in a military context. Likewise, years of witnessing and creating untold amounts of bloodshed have had their toll on [PAWN_possessive] spirit.</baseDesc>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryMilitary</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Bloodlust>0</Bloodlust>
+		</forcedTraits>
+		<workDisables>
+			<li>Social</li>
+			<li>ManualDumb</li>
+		</workDisables>
+		<shuffleable>false</shuffleable>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- Childhood backstories-->
+
+	<!--
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Orphan</defName>
+		<title>orphan</title>
+		<titleShort>orphan</titleShort>
+		<baseDesc>When [PAWN_nameDef] tried cooking for the first time, [PAWN_pronoun] burnt the house down — and [PAWN_possessive] parents with it. [PAWN_pronoun] vowed to spend the rest of [PAWN_possessive] life atoning for it.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<workDisables>
+			<li>Firefighting</li>
+			<li>Cooking</li>
+		</workDisables>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<shuffleable>false</shuffleable>
+	</AlienRace.AlienBackstoryDef>
+	-->
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_Shipbound</defName>
+		<title>shipbound child</title>
+		<titleShort>shipbound</titleShort>
+		<baseDesc>[PAWN_nameDef] was born on a research spaceship and spent most of [PAWN_possessive] childhood on it. [PAWN_pronoun] helped around in various areas on the ship.\n\n[PAWN_pronoun] learned to feel most at home with the comforting hull around [PAWN_objective] on all sides.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Undergrounder>0</Undergrounder>
+		</forcedTraits>
+		<linkedBackstory>Fendra_ShipEngineer</linkedBackstory>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_MilitaryChild</defName>
+		<title>military cadet</title>
+		<titleShort>shipbound</titleShort>
+		<baseDesc>A small number of kits are hand-selected to be inducted into the Fendran military and given extensive training and conditioning to become soldiers. [PAWN_nameDef] was one such kit. Discipline and loyalty were ingrained into [PAWN_possessive] mind at a young age.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+			<li>FendraBackstoryMilitary</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<linkedBackstory>Fendra_SuperSoldier</linkedBackstory>
+		<!-- 10% as common as the other backstories -->
+		<maleCommonality>10</maleCommonality>
+		<femaleCommonality>10</femaleCommonality>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>Fendra_StrandedChild</defName>
+		<title>stranded child</title>
+		<titleShort>shipbound</titleShort>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] sibling were some of the last people on a desolate, war-torn world after the Fendran military withdrew and left them behind. [PAWN_pronoun] lived like this for almost a decade, scavenging what [PAWN_pronoun] could from the ruined cities.\n\nOne day, a patrol ship passed overhead. In the few seconds that [PAWN_pronoun] had, [PAWN_nameDef] fired the last rounds from [PAWN_possessive] flare gun to get its attention.</baseDesc>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>FendraBackstory</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<forcedTraitsChance>
+			<!-- 50% chance to have Steadfast, otherwise Iron-willed -->
+			<li>
+				<defName>Nerves</defName>
+				<degree>1</degree>
+				<chance>50</chance>
+			</li>
+			<li>
+				<defName>Nerves</defName>
+				<degree>2</degree>
+			</li>
+		</forcedTraitsChance>
+		<linkedBackstory>Fendra_StrandedSurvivor</linkedBackstory>
+	</AlienRace.AlienBackstoryDef>
+</Defs>

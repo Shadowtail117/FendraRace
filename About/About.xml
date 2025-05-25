@@ -5,9 +5,10 @@
 	<author>Shadow</author>
 	<description>Adds the Fendra, a race of small canines, to Rimworld.\n\nDespite their fur, they do very poorly in cold temperatures. To compensate, they can research advanced, form-fitting bodysuits that help them survive harsh weather. Ideologically, Fendra are innate scientists and researchers who focus on the collective good of their society, though they can pack a punch too if need be.</description>
 	<supportedVersions>
+		<li>1.5</li>
 		<li>1.4</li>
 	</supportedVersions>
-	<modVersion>1.0</modVersion>
+	<modVersion>1.1p1</modVersion>
 
 	<modDependencies>
 	  <li>

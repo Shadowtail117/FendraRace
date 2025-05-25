@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<ThingDef ParentName="BodyPartNaturalBase">
+	<defName>FendraTail</defName>
+	<label>fendra tail</label>
+	<description>A fluffy, bushy Fendra tail. What did you do...?</description>
+	<graphicData>
+		<texPath>Things/Item/Health/HealthItem</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<statBases>
+		<MarketValue>150</MarketValue>
+		<Mass>0.5</Mass>
+	</statBases>
+</ThingDef>
+
+<ThingDef ParentName="BodyPartBionicBase">
+	<defName>FendraBionicTail</defName>
+	<label>bionic fendra tail</label>
+	<description>A bionic Fendra tail. The exterior looks natural, although the fur is always immaculately groomed and fluffy. Microservos allow the user to move the tail with ease, and built-in sensors automatically distribute weight in the tail to improve balance.</description>
+	<techLevel>Spacer</techLevel>
+	<costList>
+		<Plasteel>3</Plasteel>
+		<ComponentSpacer>1</ComponentSpacer>
+	</costList>
+	<statBases>
+		<Mass>1</Mass>
+	</statBases>
+	<recipeMaker>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<researchPrerequisite>FendraBionicTailResearch</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workAmount>5000</workAmount>
+	</recipeMaker>
+</ThingDef>
+</Defs>
